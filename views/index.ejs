@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
-  <title>21 Savage Fans</title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <title> The To-do list</title>
 </head>
+
 <body>
-  <h1>21 Savage</h1>
-  <h2>Why you trappin so hard?</h2>
+  <h1> Khorally's To Do List</h1>
+
+  <section class="container">
+    <section class="left">
+      <h2>Items To Complete: <span class="countElement"></span></h2>
+      <button class="clear" type="button" name="button"> clear all</button>
+      <button class="clearCompleted" type="button" name="button"> clear completed </button>
+      <ul class="list">
+        <% for(var i=0; i<tasks.length; i++) {%>
+          <% if (tasks[i].completed) {%>
+            <li class="done"> <span><%= tasks[i].task %></span> <button class="remove" type="button" name="button"> Remove </button> </li>
+          <%}%>
+          <% if (!tasks[i].completed) {%>
+            <li> <span><%= tasks[i].task %></span> <button class="remove" type="button" name="button"> Remove </button> </li>
+          <%}%>
+      <%}%>
+      </ul>
+
+    </section>
+
+    <section class="right">
 
 
-  <h3>Messages</h3>
-  <ul class="messages">
-  <% for(var i=0; i<messages.length; i++) {%>
-    <li class="message">
-      <span><%= messages[i].name %></span>
-      <span><%= messages[i].msg %></span>
-      <span><%= messages[i].thumbUp %></span>
-      <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
-      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
-    </li>
-  <% } %>
-  </ul>
+      <h2>Add a New Task</h2>
+      <input class="input" type="text" name="" placeholder="insert new task here..." value="">
+      <button class="create" type="" name="button">Add</button>
 
-  <h2>Add a message</h2>
+    </section>
 
-  <form action="/messages" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="message" name="msg">
-    <button type="submit">Submit</button>
-  </form>
 
-  <script src="main.js"></script>
 
+
+    <script src="main.js" charset="utf-8"></script>
 </body>
+
 </html>

@@ -1,11 +1,6 @@
-![21 Savage](public/21savage.jpg)
+#Todo-list
 
-## Installation
+ Add the items you wish to complete for the day, cross out each item upon completion, then clear the entire list once completed. Enjoy [The Application here](https://stupefied-hodgkin-9c5d10.netlify.app)
 
-1. Clone repo
-2. run `npm install`
 
-## Usage
-
-1. run `npm run savage`
-2. Navigate to `localhost:3000`
+ ![Application Screenshot](background2.jpg)
